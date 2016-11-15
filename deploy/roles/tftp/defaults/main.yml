@@ -1,0 +1,160 @@
+---
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#                           Apache2
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+apache_root: /var/www/html
+apache_tftp_links:
+  - ESXi_VIBS
+  - ESXi_boot
+  - images
+  - KS
+apt_cacher_server: '{{ ansible_hostname }}'
+apt_mirror_dir: /ubuntu 
+apt_mirror_server: 'apt-mirror.{{ domain_name }}' 
+config_tftp: true 
+enable_apt_caching: false  
+enable_apt_mirror: false  
+
+# pri_dns:
+# sec_dns: 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#                           ESXi
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+esxi_addl_settings:  #define additional esxli commands to run in order to configure each host
+  - desc: 'Set default domain lookup name'
+    command: 'esxcli network ip dns search add --domain={{ pri_domain_name }}'
+#  - desc: 'Add vmnic3 to vSwitch0'
+#    command: 'esxcli network vswitch standard uplink add --uplink-name vmnic3 --vswitch-name vSwitch0'
+#  - desc: 'SATP configurations'
+#    commands:
+#      - 'esxcli storage nmp satp set --satp VMW_SATP_SVC --default-psp VMW_PSP_RR'
+#      - 'esxcli storage nmp satp set --satp VMW_SATP_DEFAULT_AA --default-psp VMW_PSP_RR'
+esxi_create_host_kickstart_configs: true #defines if individual kickstart configs should be created
+esxi_enable_snmp: false
+esxi_enable_ssh_and_shell: false  #defines if SSH and ESXi shell are to be enabled
+esxi_exit_maint_mode: false  #defines if during TFTP/PXE load of ESXi hosts maintenance mode should be exited.
+esxi_global_network_options:
+  - bootproto: dhcp
+    create_default_portgroup: false
+    interface: vmnic0
+esxi_hosts:
+  - name: esxi01
+    bootproto: dhcp
+    create_default_portgroup: false
+    interface: vmnic0
+  - name: esxi02
+    bootproto: static
+    create_default_portgroup: false
+    interface: vmnic0
+    ip: 10.0.106.22
+    netmask: 255.255.255.0
+    gateway: 10.0.106.1
+    nameservers: '8.8.8.8,8.8.4.4'
+    #nameservers: '{{ pri_dns }},{{ sec_dns }}'
+esxi_install_disk_options: install --firstdisk --overwritevmfs  
+esxi_install_vibs: false
+esxi_root_pw: vmware1  
+esxi_root_pw_encrypted: false  #defines if esxi_root_pw has been set to an already encrypted password
+esxi_snmp_options:
+  - community: PUBLIC
+    allowed_from: 10.0.0.0/24
+esxi_vibs:
+  - 'http://{{ ansible_fqdn }}/ESXi_VIBS/Dell/cross_oem-dell-openmanage-esxi_7.3.0.2.ESXi550-0000.vib'
+  - 'http://{{ ansible_fqdn }}/ESXi_VIBS/Dell/cross_oem-dell-iSM-esxi_1.0.ESXi550-0000.vib'
+  - 'http://{{ ansible_fqdn }}/ESXi_VIBS/PernixData/PernixData_bootbank_pernixcore-vSphere5.5.0_1.5.0.2-25498.vib'
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#                           TFTP
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+netboot_url: http://archive.ubuntu.com/ubuntu/dists/trusty-updates/main/installer-amd64/current/images/netboot/
+netboot_file: netboot.tar.gz
+pre_seed_expert_recipe_partitioning: false  #defines if custom partitioning is required
+pre_seed_expert_recipe_partitions:  #define the partitions to create during pre-seed
+  - name: boot
+    mountpoint: /boot
+    bootable: true
+    filesystem: ext4
+###    lv_name: boot  #This is an example only for /boot  do not assign an lv_name for boot.../boot will not be part of LVM.
+    max_size: 1000
+    method: format
+    min_size: 500
+    priority: 50
+    use_filesystem: true
+  - name: swap
+#    mountpoint:  #not needed for swap
+#    bootable: false  #not needed for swap.
+    filesystem: linux-swap
+    lv_name: swap  #defines the LVM name to use if pre_seed_partitioning_method: lvm and pre_seed_expert_recipe_partitioning: true
+    max_size: 2048
+    method: swap
+    min_size: 500
+    priority: 512
+#    use_filesystem: true
+  - name: root
+    mountpoint: /
+#    bootable: false  #not needed for root
+    filesystem: ext4
+    lv_name: root  #defines the LVM name to use if pre_seed_partitioning_method: lvm and pre_seed_expert_recipe_partitioning: true
+    max_size: 10000
+    method: format
+    min_size: 5000
+    priority: 10000
+    use_filesystem: true
+pre_seed_packages:  #define packages to install during pre-seed installation(s)
+  - openssh-server
+  - open-vm-tools
+pre_seed_partition_disk: /dev/sda  #defines disk to install to during pre-seed TFTP/PXE install
+pre_seed_partitioning_method: lvm   #defines partitioning method....lvm, regular or crypto
+pri_domain_name: '{{ domain_name }}'
+primary_gfs_server: ''  #define if using GlusterFS
+secondary_gfs_server: ''  #define if using GlusterFS
+sync_tftp: false  #defines if setting up multiple servers are to be configured for GlusterFS
+root_password: [] #define root password for hosts....define here or in group_vars/all
+tftpboot_backup_dir: ''  #define if using GlusterFS
+tftpboot_home: ''  #define if using GlusterFS
+lftpboot_mnt: ''  #define if using GlusterFS
+tftp_bind_address: '{{ ansible_default_ipv4.address }}'
+tftp_boot_menu:  #menu_default has been disabled to allow boot from local HD by default
+  - label: local
+    menu_label: '^Boot from hard drive'
+    menu_default: true
+    localboot: true
+  - label: 'auto-install Ubuntu Netboot (Latest)'
+    menu_label: 'Automated install Ubuntu (Latest)'
+    menu_default: false
+    kernel: ubuntu-installer/amd64/linux
+    append: 'auto=true priority=critical vga=788 initrd=tftp://{{ tftp_bind_address }}/ubuntu-installer/amd64/initrd.gz locale=en_US.UTF-8 kbd-chooser/method=us netcfg/choose_interface=auto url=tftp://{{ tftp_bind_address }}/preseed.cfg'
+  - label: 'Ubuntu 14.04.2 (Pre-Seed)'
+    menu_label: 'Install Ubuntu 14.04.2 (Pre-Seed)'
+    menu_default: false
+    kernel: images/Ubuntu/14.04/install/netboot/ubuntu-installer/amd64/linux
+    append: 'auto=true priority=critical vga=788 initrd=tftp://{{ tftp_bind_address }}/images/Ubuntu/14.04/install/netboot/ubuntu-installer/amd64/initrd.gz locale=en_US.UTF-8 kbd-chooser/method=us netcfg/choose_interface=auto url=tftp://{{ tftp_bind_address }}/ubuntu_14.04_preseed.cfg live-installer/net-image=http://{{ tftp_bind_address }}/images/Ubuntu/14.04/install/filesystem.squashfs'
+tftp_build_images: true  
+tftp_images_folders:
+  - ESXi/6.0
+  - ESXi/6.0U1
+  - ESXi/6.0U2
+  - Ubuntu/12.04
+  - Ubuntu/14.04
+tftp_poweroff_after_install: false
+tftpboot_dir: /var/lib/tftpboot
+tftp_iso_images: []
+#  - url: "http://mirror.pnl.gov/releases/14.04"
+#    file: "ubuntu-14.04.4-server-amd64.iso" 
+#    folder: "Ubuntu/14.04" 
+vmware_iso_images:
+  - file: VMware-ESXi-6.0.0-Update2-3620759-HPE-600.9.6.0.49-Oct2016.iso
+    folder: ESXi/6.0U2
+    version: 6.0U2
+tftp_preseed_create_users: false  
+tftp_preseed_files:
+  - preseed
+  - ubuntu_12.04_preseed
+  - ubuntu_14.04_preseed
+  - ubuntu_16.04_preseed
+tftp_preseed_ntp_sync: true 
+tftp_preseed_users_encrypted_pw: true  

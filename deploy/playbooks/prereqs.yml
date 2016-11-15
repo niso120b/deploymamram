@@ -1,0 +1,5 @@
+---
+
+- hosts: deploy-servers[0]
+  roles:
+  - prereqs

@@ -1,0 +1,14 @@
+---
+
+create_local_users: true  #defines creating local user accounts on hosts
+create_users:  
+  - user: autouser  # define username
+    comment: 'Automation user'  # define a comment to associate with the account
+    generate_keys: true  # generate ssh keys...( true|false )
+#    home: ''  # define a different home directory... ''=/home/username
+    pass: qwe123  # define password for account
+#    shell: ''  # define a different shell for the user
+    preseed_user: false  
+    state: absent  # defines whether account exists or not ( absent|present )
+    sudo: true  # define if user should have sudo access...( true|false )
+    system_account: false  # define if account is a system account...( true|false )

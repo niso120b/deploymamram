@@ -1,0 +1,90 @@
+---
+
+bind_acls:  
+  - name: 'dmz'
+    networks:
+      - '10.100.0.0/16'
+bind_caching_server: true 
+bind_forward_zones:
+  - zone: '{{ domain_name }}'
+    expire: 2419200
+    hostmaster: 'hostmaster.{{ domain_name }}'
+    masters:
+      - '10.100.1.5'
+    nameservers:
+      - 'sanjer01.{{ domain_name }}'
+      - 'sanjer02.{{ domain_name }}'
+      - 'sanjer03.{{ domain_name }}'
+    neg_cache_ttl: 604800
+    records:
+      - name: 'sanjer01'
+        address: '10.100.1.5'
+        type: 'A'
+      - name: 'sanjer02'
+        address: '10.100.1.6'
+        type: 'A'
+      - name: 'sanjer03'
+        address: '10.100.1.7'
+        type: 'A'
+      - name: 'test01'
+        address: '10.100.1.11'
+        type: 'A'
+      - name: 'test02'
+        address: '10.100.1.12'
+        type: 'A'
+      - name: 'dev'
+        address: 'test02.{{ domain_name }}'
+        type: 'CNAME'
+      - name: 'test03'
+        address: '10.100.1.13'
+        type: 'A'
+      - name: 'test04'
+        address: '10.100.1.14'
+        type: 'A'
+    refresh: 604800
+    retry: 86400
+    slaves:
+      - '10.100.1.6'
+      - '10.100.1.7'
+    soa: '{{ ansible_hostname }}.{{ domain_name }}'
+    ttl: 604800
+bind_forwarding_server: false  
+bind_forwarders:  
+  - 8.8.8.8
+  - 8.8.4.4
+bind_masters_group: 'bind-masters'
+bind_reverse_zones:
+  - zone: '10.100'
+    expire: 2419200
+    hostmaster: 'hostmaster.{{ domain_name }}'
+    masters:
+      - '10.100.1.5'
+    nameservers:
+      - 'sanjer01.{{ domain_name }}'
+      - 'sanjer02.{{ domain_name }}'
+      - 'sanjer03.{{ domain_name }}'
+    neg_cache_ttl: 604800
+    records:
+      - name: 'sanjer01.{{ domain_name }}'
+        address: '1.5'
+      - name: 'sanjer02.{{ domain_name }}'
+        address: '1.6'
+      - name: 'sanjer03.{{ domain_name }}'
+        address: '1.7'
+      - name: 'test01.{{ domain_name }}'
+        address: '1.11'
+      - name: 'test02.{{ domain_name }}'
+        address: '1.12'
+      - name: 'test03.{{ domain_name }}'
+        address: '1.13'
+    refresh: 604800
+    retry: 86400
+    slaves: 
+      - '10.100.1.6'
+      - '10.100.1.7'
+    soa: '{{ ansible_hostname }}.{{ domain_name }}'
+    ttl: 604800
+bind_slaves_group: 'bind-slaves'
+bind_zones_dir: '/etc/bind/zones'
+config_bind: true
+manage_bind_zones: true

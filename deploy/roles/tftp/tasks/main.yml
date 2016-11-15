@@ -1,0 +1,14 @@
+---
+
+- name: "installing pre-reqs packages"
+  apt:
+   name: "{{ item }}"
+   state: absent
+  with_items:
+    - nfs-kernel-server
+
+- include: config_tftp.yml
+  when: config_tftp is defined and config_tftp
+
+- include: build_images.yml
+  when: tftp_build_images is defined and tftp_build_images

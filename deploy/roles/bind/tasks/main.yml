@@ -1,0 +1,22 @@
+---
+
+- name: "Installing bind packages"
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - bind9
+  - bind9utils
+  - bind9-doc
+
+- name: "Configuring bind"
+  template:
+    src: "etc/bind/named.conf.options.j2"
+    dest: "/etc/bind/named.conf.options"
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart bind
+
+- include: manage_zones.yml

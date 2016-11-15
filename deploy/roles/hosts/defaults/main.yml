@@ -1,0 +1,4 @@
+---
+
+etc_hosts_static_ip: true
+etc_hosts_add_all_hosts: true

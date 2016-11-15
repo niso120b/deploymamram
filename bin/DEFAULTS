@@ -1,0 +1,39 @@
+#
+#
+# Default variables values
+# 
+# Author: Nissim Bitan
+#
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#			Repository variables
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+export WORK_DIR=/opt/mamram
+export BIN_DIR=${WORK_DIR}/bin
+export LIB_DIR=${WORK_DIR}/lib
+export IMG_DIR=${LIB_DIR}/images
+export DEPLOY_DIR=${WORK_DIR}/deploy
+export REPO_DIR=${LIB_DIR}/ubuntu
+export LOG_DIR=${WORK_DIR}/logs
+export LOG_FILE=${LOG_DIR}/deploy.log
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#                       Ansible variables
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+export ROLES_DIR=${DEPLOY_DIR}/roles
+export INVENTORIES_DIR=${DEPLOY_DIR}/inventories
+export PLAYBOOKS_DIR=${DEPLOY_DIR}/playbooks
+export ANSIBLE_PKG=${REPO_DIR}/packages/ansible_2.1.1.0-1ppa~trusty_all.deb
+export ANSIBLE_URL=https://launchpad.net/~ansible/+archive/ubuntu/ansible/+files/ansible_2.1.1.0-1ppa~trusty_all.deb
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#                       Vagrant variables
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+export VAGRANT_DIR=${DEPLOY_DIR}/vagrant
+export BOX_FILE=${IMG_DIR}/trusty-server-cloudimg-amd64-vagrant-disk1.box
+export BOX_URL=https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+
+export GATEWAY_IFACE=$(netstat -r | grep default | awk '{print $8}')
+export GATEWAY_IFACE=${GATEWAY_IFACE:-$(netstat -r | tail -n 2 | head -n 1 | awk '{print $8}')}
+export GATEWAY_IFACE=${GATEWAY_IFACE:-"lo"}
+export EXT_IFACE=${EXT_IFACE:-${GATEWAY_IFACE}}

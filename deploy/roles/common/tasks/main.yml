@@ -1,0 +1,50 @@
+---
+
+- name: "Install common packages"
+  apt:
+    name: "{{ item }}"
+    state: installed
+    update_cache: yes
+    force: yes
+  with_items:
+  - tree
+  - tcpdump
+  - strace
+  - netcat
+  - mc
+  - wget
+  - curl
+  - git
+  - vim
+  - traceroute
+  - iperf
+  - ansible
+  tags:
+  - apt
+
+- name: "Update sysctl settings"
+  sysctl: name={{ item.key }} value={{ item.value }}
+  with_items:
+    - { key: "net.ipv6.conf.all.disable_ipv6", value: 1 }
+    - { key: "net.ipv6.conf.default.disable_ipv6", value: 1 }
+    - { key: "net.ipv6.conf.lo.disable_ipv6", value: 1 }
+    - { key: "net.ipv4.tcp_keepalive_time", value: 7200 }
+    - { key: "net.ipv4.tcp_keepalive_intvl", value: 75 }
+    - { key: "net.ipv4.tcp_keepalive_probes", value: 9 }
+    - { key: "net.ipv4.tcp_retries2", value: 15 }
+
+- name: "Set locale"
+  shell:
+    "{{ item }}"
+  environment:
+    LANGUAGE: "{{ default_locale }}"
+    LANG: "{{ default_locale }}"
+    LC_ALL: "{{ default_locale }}"
+  with_items:
+  - "locale-gen {{ default_locale }}"
+  - "dpkg-reconfigure locales"
+
+- name: "Set default locale"
+  copy:
+    content: "LC_ALL={{ default_locale }}"
+    dest: /etc/default/locale

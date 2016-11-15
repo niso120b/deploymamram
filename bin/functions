@@ -1,0 +1,130 @@
+#!/bin/bash
+#
+# Path: bin/functions
+# Desc: functions implementations for pre-Ansible environment
+#
+
+if [ -e ${0} ]; then
+  DIRNAME=$( dirname $0 )
+else
+  DIRNAME="/opt/mamram/bin"
+fi
+#echo "DIRNAME: ${DIRNAME}"
+
+source $DIRNAME/../bin/DEFAULTS
+
+function init_repo() {
+  echo "Initializing project" | tee -a ${LOG_FILE}
+  cd ${WORK_DIR}
+  # File permissions are being reset during the code insertion process. required.</SSH>
+  echo "Setting file permissions and ownership" | tee -a ${LOG_FILE}
+  chown -R ${MAMRAM_USER}:${MAMRAM_USER} ${WORK_DIR}
+  for mamram_script in $(find . -type f -name "**.sh");         do chmod 755 $mamram_script; done;
+  for mamram_script in $(find . -type f -name "**.sh.j2");      do chmod 755 $mamram_script; done;
+  for mamram_script in $(find . -type f -name "**.py");         do chmod 755 $mamram_script; done;
+  for mamram_script in $(find . -type f -name "**.py.j2");      do chmod 755 $mamram_script; done;
+  for mamram_script in $(find . -type f -name "**.orig");       do chmod 660 $mamram_script; done;
+  find . -type f -name "**.pyc" -delete -print
+}
+
+function install_package() {
+  echo "Installing package '${@}'" | tee -a ${LOG_FILE}
+  apt-get install "$@" -y --force-yes
+}
+
+function is_package_installed() {
+  echo "Verifying package '${@}' installation" | tee -a ${LOG_FILE}
+  [[ -z "$@" ]] && return 1
+
+  dpkg -l "$@" | grep ii > /dev/null
+  return $?
+}
+
+
+function validate_ansible_reqs() {
+  for pkg in sshpass python-netaddr python-yaml python-support python-jinja2 python-paramiko python-markupsafe;
+  do
+    is_package_installed ${pkg} || install_package ${pkg}
+    is_package_installed ${pkg} || (echo "Error installing packages '${pkg}'" && exit 2)
+  done
+}
+
+function install_ansible() {
+  echo "Installing Ansible" | tee -a ${LOG_FILE}
+  validate_ansible_reqs
+  # if file isn't already available from running deploy.sh repository, download it
+  [ ! -f $ANSIBLE_PKG ] && wget --continue $ANSIBLE_URL -O $ANSIBLE_PKG
+  dpkg -i $ANSIBLE_PKG
+  apt-get -f install --yes --force-yes
+  [ $(ansible --version | grep 1\.9\.4 | wc -l) != 1 ] && echo "*** Error while installing Ansible, aborting execution." && exit 1
+  echo "Installed Ansible version: $(ansible --version)"
+}
+
+function deploy_pubkey() {
+  echo "Deploying public key" | tee -a ${LOG_FILE}
+  cd ${DEPLOY_DIR}
+  time \
+    ansible-playbook \
+    -i ${INVENTORIES_DIR}/hosts \
+    -u user \
+    ${PLAYBOOKS_DIR}/pubkey.yml
+}
+
+function set_aliases() {
+  export NODEID=101
+  if [ $(ifconfig | grep ${EXT_IFACE} | wc -l) -eq 1 ]; then
+    for subnet in 1 2 3
+      do
+        ifconfig ${EXT_IFACE}:${subnet} 10.100.${subnet}.${NODEID} netmask 255.255.255.0 up
+      done
+  fi
+}
+
+function set_aliases_virtual() {
+  export MAMRAM_IFACE=patch-mamram
+  echo "Removing old MAMRAM interface - ${MAMRAM_IFACE}"
+  ip link set dev ${MAMRAM_IFACE} down
+  ip link delete ${MAMRAM_IFACE}
+  modprobe -r dummy
+  echo "Adding new MAMRAM interface - ${MAMRAM_IFACE}"
+  modprobe dummy
+  ip link set name patch-mamram dev dummy0
+  ip link set dev patch-mamram up
+  export EXT_IFACE=${MAMRAM_IFACE}
+  set_aliases
+}
+
+function validate_vagrant_reqs() {
+  for pkg in vagrant git virtualbox xorg xauth;
+  do
+    is_package_installed ${pkg} || install_package ${pkg}
+    is_package_installed ${pkg} || (echo "Error installing packages '${pkg}'" && exit 2)
+  done
+}
+
+function vagrant_setup() {
+  if [ $(dmesg |grep "BIOS VirtualBox" | wc -l) -eq 1 ]; then
+    echo -e "Cannot run Vagrant inside VirtualBox"
+    exit 2
+  fi
+  
+  validate_vagrant_reqs
+  cd ${VAGRANT_DIR}
+  vagrant box add ubuntu/trusty64 ${BOX_FILE}
+ 
+  echo "Destroying previous Vagrant hosts" | tee -a ${LOG_FILE}
+  time vagrant destroy --force 2>&1 | tee -a ${LOG_FILE}
+
+  echo "Removing vagrant host leftovers" | tee -a ${LOG_FILE}
+  rm -rf .vagrant/machines/*
+
+  echo "Instantiating Vagrant hosts" | tee -a ${LOG_FILE}
+  VBOX_PIDS=$(ps -ef | grep VBoxHeadless | grep -v grep | awk '{print $2}')
+  for pid in $VBOX_PIDS
+  do
+    echo "Killing old vagrant host $pid $(cat /proc/$pid/cmdline)" | tee -a ${LOG_FILE}
+    kill -15 $pid
+  done
+  sed -i s#__ext_iface__#${EXT_IFACE}#g ${VAGRANT_DIR}/Vagrantfile
+  time vagrant up | tee -a ${LOG_FILE}
+}

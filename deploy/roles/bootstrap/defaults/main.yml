@@ -1,0 +1,5 @@
+---
+
+set_root_pw: false  
+reboot: true  
+root_password: qwe123

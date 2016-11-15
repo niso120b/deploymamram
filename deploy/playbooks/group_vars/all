@@ -1,0 +1,18 @@
+remote_user: user
+
+work_dir:       /opt/mamram
+scripts_dir:    "{{ work_dir }}/bin"
+lib_dir:        "{{ work_dir }}/lib"
+images_dir:     "{{ lib_dir }}/images"
+deploy_dir:     "{{ work_dir }}/deploy"
+vagrant_dir:    "{{ deploy_dir }}/vagrant"
+playbooks_dir:  "{{ deploy_dir }}/playbooks"
+logs_dir:       "/var/log/mamram"
+
+domain_name: "vmware.local"
+
+external_dns_nameservers:
+  - "8.8.8.8"
+  - "8.8.4.4"
+
+default_locale: "en_US.UTF-8"

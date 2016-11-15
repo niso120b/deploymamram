@@ -1,0 +1,9 @@
+---
+
+- name: "Download external binaries"
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.path }}"
+    validate_certs: no
+  with_items: 
+  - "{{ external_binaries }}"

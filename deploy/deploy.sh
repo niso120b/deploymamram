@@ -1,0 +1,1 @@
+/opt/mamram/bin/deploy.sh

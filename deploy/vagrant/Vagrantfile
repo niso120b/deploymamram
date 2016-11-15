@@ -1,0 +1,67 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+#
+# Author: Nissim Bitan
+#
+
+domain = 'vmware.local'
+
+physical_iface_name=ENV['EXT_IFACE'] ? ENV['EXT_IFACE'] : 'eno1'
+
+# nodes for this physical server
+nodes = [
+  { :hostname => 'sanjer01',             :ipoctet => '5',  :ram => 4096 , :cpus => 2},
+  { :hostname => 'sanjer02',             :ipoctet => '6',  :ram => 4096 , :cpus => 2},
+#  { :hostname => 'compute',          :ipoctet => '44', :ram => 2048 , :cpus => 2},
+]
+
+subnets = [ '10.100.1', '10.100.2', '10.100.3' ]
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  nodes.each do |node|
+    config.vm.define node[:hostname] do |nodeconfig|
+      nodeconfig.vm.box = "ubuntu/trusty64" # vagrant repo box
+      nodeconfig.vm.hostname = node[:hostname] + "." + domain
+
+      # Sync project folder to Sanjer
+      if node[:hostname] == 'sanjer01'
+        nodeconfig.vm.synced_folder "~/.ssh", "/root/.ssh", owner: "root", group: "root"
+        nodeconfig.vm.synced_folder "/opt/mamram", "/opt/mamram", owner: "root", group: "root"
+      end
+ 
+      # Configure networking
+      nodeconfig.vm.network :forwarded_port, guest: 22, host: 2000 + node[:ipoctet].to_i , id: 'ssh'
+      subnets.each do |subnet|
+#        nodeconfig.vm.network :private_network, ip: subnet + "." + node[:ipoctet], auto_config: true
+        nodeconfig.vm.network "public_network", bridge: physical_iface_name, ip: subnet + "." + node[:ipoctet]
+      end
+
+      # Configure machine specs
+      memory = node[:ram] ? node[:ram] : 512;
+      cpus = node[:cpus] ? node[:cpus] : 1;
+      nodeconfig.vm.provider :virtualbox do |vb|
+        vb.customize [
+          "modifyvm", :id,
+#          "--cpuexecutioncap", "50",
+          "--ioapic", "on",
+          "--memory", memory.to_s,
+          "--cpus", cpus.to_s,
+          "--audio", "none",
+          "--cableconnected2", "on",
+          "--nicpromisc3", "allow-all",
+          "--cableconnected3", "on",
+          "--nicpromisc4", "allow-all",
+          "--cableconnected4", "on",
+        ]
+      end
+    end
+  end
+
+  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+  config.vm.provision :shell, :path => "bootstrap.sh"
+
+end

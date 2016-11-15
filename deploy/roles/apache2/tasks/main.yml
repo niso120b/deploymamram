@@ -1,0 +1,20 @@
+---
+
+- name: "updating apt cache"
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: "installing apache2 package"
+  apt:
+    name: "apache2"
+    state: present
+
+- include: config_apache2.yml
+  when: config_apache2
+
+- include: php.yml
+  tags:
+    - apache2_config_php
+    - install_apache2_php5
+  when: apache2_install_php

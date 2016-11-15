@@ -1,0 +1,1144 @@
+Sun Nov 13 11:12:10 IST 2016
+Sun Nov 13 11:12:43 IST 2016
+Initializing project
+Setting file permissions and ownership
+Sun Nov 13 11:13:06 IST 2016
+Initializing project
+Setting file permissions and ownership
+Sun Nov 13 11:13:29 IST 2016
+Initializing project
+Setting file permissions and ownership
+Sun Nov 13 11:13:48 IST 2016
+Initializing project
+Setting file permissions and ownership
+Sun Nov 13 11:14:47 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer: VM not created. Moving on...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer' up with 'virtualbox' provider...
+Sun Nov 13 11:15:10 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer: VM not created. Moving on...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer' up with 'virtualbox' provider...
+==> sanjer: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer: Matching MAC address for NAT networking...
+==> sanjer: Setting the name of the VM: vagrant_sanjer_1479028526535_10355
+==> sanjer: Clearing any previously set forwarded ports...
+==> sanjer: Clearing any previously set network interfaces...
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Preparing network interfaces based on configuration...
+    sanjer: Adapter 1: nat
+    sanjer: Adapter 2: bridged
+    sanjer: Adapter 3: bridged
+    sanjer: Adapter 4: bridged
+==> sanjer: Forwarding ports...
+    sanjer: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer: Running 'pre-boot' VM customizations...
+==> sanjer: Booting VM...
+==> sanjer: Waiting for machine to boot. This may take a few minutes...
+    sanjer: SSH address: 127.0.0.1:2005
+    sanjer: SSH username: vagrant
+    sanjer: SSH auth method: private key
+    sanjer: 
+    sanjer: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer: this with a newly generated keypair for better security.
+    sanjer: 
+    sanjer: Inserting generated public key within guest...
+    sanjer: Removing insecure key from the guest if it's present...
+    sanjer: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer: Machine booted and ready!
+==> sanjer: Checking for guest additions in VM...
+    sanjer: The guest additions on this VM do not match the installed version of
+    sanjer: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer: prevent things such as shared folders from working properly. If you see
+    sanjer: shared folder errors, please make sure the guest additions within the
+    sanjer: virtual machine match the version of VirtualBox you have installed on
+    sanjer: your host and reload your VM.
+    sanjer: 
+    sanjer: Guest Additions Version: 4.3.36
+    sanjer: VirtualBox Version: 5.0
+==> sanjer: Setting hostname...
+==> sanjer: Configuring and enabling network interfaces...
+==> sanjer: Mounting shared folders...
+    sanjer: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer: /root/.ssh => /root/.ssh
+    sanjer: /opt/mamram => /opt/mamram
+==> sanjer: Running provisioner: shell...
+    sanjer: Running: /tmp/vagrant-shell20161113-11620-1ndt7n1.sh
+Sun Nov 13 11:16:19 IST 2016
+Deploying public key
+Sun Nov 13 11:17:04 IST 2016
+Deploying public key
+Sun Nov 13 11:17:32 IST 2016
+Deploying public key
+Sun Nov 13 11:35:38 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Installing package 'virtualbox'
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer: Forcing shutdown of VM...
+==> sanjer: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer' up with 'virtualbox' provider...
+==> sanjer: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer: Matching MAC address for NAT networking...
+==> sanjer: Setting the name of the VM: vagrant_sanjer_1479029760822_36103
+==> sanjer: Clearing any previously set forwarded ports...
+==> sanjer: Clearing any previously set network interfaces...
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Preparing network interfaces based on configuration...
+    sanjer: Adapter 1: nat
+    sanjer: Adapter 2: bridged
+    sanjer: Adapter 3: bridged
+    sanjer: Adapter 4: bridged
+==> sanjer: Forwarding ports...
+    sanjer: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer: Running 'pre-boot' VM customizations...
+==> sanjer: Booting VM...
+==> sanjer: Waiting for machine to boot. This may take a few minutes...
+    sanjer: SSH address: 127.0.0.1:2005
+    sanjer: SSH username: vagrant
+    sanjer: SSH auth method: private key
+    sanjer: 
+    sanjer: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer: this with a newly generated keypair for better security.
+    sanjer: 
+    sanjer: Inserting generated public key within guest...
+    sanjer: Removing insecure key from the guest if it's present...
+    sanjer: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer: Machine booted and ready!
+==> sanjer: Checking for guest additions in VM...
+    sanjer: The guest additions on this VM do not match the installed version of
+    sanjer: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer: prevent things such as shared folders from working properly. If you see
+    sanjer: shared folder errors, please make sure the guest additions within the
+    sanjer: virtual machine match the version of VirtualBox you have installed on
+    sanjer: your host and reload your VM.
+    sanjer: 
+    sanjer: Guest Additions Version: 4.3.36
+    sanjer: VirtualBox Version: 5.0
+==> sanjer: Setting hostname...
+==> sanjer: Configuring and enabling network interfaces...
+==> sanjer: Mounting shared folders...
+    sanjer: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer: /root/.ssh => /root/.ssh
+    sanjer: /opt/mamram => /opt/mamram
+==> sanjer: Running provisioner: shell...
+    sanjer: Running: /tmp/vagrant-shell20161113-17040-ov20nn.sh
+Sun Nov 13 11:38:50 IST 2016
+Deploying public key
+Sun Nov 13 12:51:38 UTC 2016
+Installing Ansible
+Verifying package 'sshpass' installation
+Installing package 'sshpass'
+Verifying package 'sshpass' installation
+Verifying package 'python-netaddr' installation
+Installing package 'python-netaddr'
+Verifying package 'python-netaddr' installation
+Verifying package 'python-yaml' installation
+Verifying package 'python-yaml' installation
+Verifying package 'python-support' installation
+Installing package 'python-support'
+Verifying package 'python-support' installation
+Verifying package 'python-jinja2' installation
+Installing package 'python-jinja2'
+Verifying package 'python-jinja2' installation
+Verifying package 'python-paramiko' installation
+Installing package 'python-paramiko'
+Verifying package 'python-paramiko' installation
+Verifying package 'python-markupsafe' installation
+Verifying package 'python-markupsafe' installation
+Sun Nov 13 12:52:55 UTC 2016
+Installing Ansible
+Verifying package 'sshpass' installation
+Verifying package 'sshpass' installation
+Verifying package 'python-netaddr' installation
+Verifying package 'python-netaddr' installation
+Verifying package 'python-yaml' installation
+Verifying package 'python-yaml' installation
+Verifying package 'python-support' installation
+Verifying package 'python-support' installation
+Verifying package 'python-jinja2' installation
+Verifying package 'python-jinja2' installation
+Verifying package 'python-paramiko' installation
+Verifying package 'python-paramiko' installation
+Verifying package 'python-markupsafe' installation
+Verifying package 'python-markupsafe' installation
+Sun Nov 13 12:53:42 UTC 2016
+Installing Ansible
+Verifying package 'sshpass' installation
+Verifying package 'sshpass' installation
+Verifying package 'python-netaddr' installation
+Verifying package 'python-netaddr' installation
+Verifying package 'python-yaml' installation
+Verifying package 'python-yaml' installation
+Verifying package 'python-support' installation
+Verifying package 'python-support' installation
+Verifying package 'python-jinja2' installation
+Verifying package 'python-jinja2' installation
+Verifying package 'python-paramiko' installation
+Verifying package 'python-paramiko' installation
+Verifying package 'python-markupsafe' installation
+Verifying package 'python-markupsafe' installation
+Sun Nov 13 16:42:52 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer: Forcing shutdown of VM...
+==> sanjer: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer' up with 'virtualbox' provider...
+==> sanjer: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer: Matching MAC address for NAT networking...
+==> sanjer: Setting the name of the VM: vagrant_sanjer_1479048188668_67906
+==> sanjer: Clearing any previously set forwarded ports...
+==> sanjer: Clearing any previously set network interfaces...
+Sun Nov 13 16:49:23 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer' up with 'virtualbox' provider...
+==> sanjer: Importing base box 'ubuntu/trusty64'...
+[KProgress: 70%[KProgress: 90%[K==> sanjer: Matching MAC address for NAT networking...
+==> sanjer: Setting the name of the VM: vagrant_sanjer_1479048579689_69428
+==> sanjer: Clearing any previously set forwarded ports...
+==> sanjer: Clearing any previously set network interfaces...
+Sun Nov 13 16:56:22 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer' up with 'virtualbox' provider...
+==> sanjer: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer: Matching MAC address for NAT networking...
+==> sanjer: Setting the name of the VM: vagrant_sanjer_1479048999177_59471
+==> sanjer: Clearing any previously set forwarded ports...
+==> sanjer: Clearing any previously set network interfaces...
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Preparing network interfaces based on configuration...
+    sanjer: Adapter 1: nat
+    sanjer: Adapter 2: bridged
+    sanjer: Adapter 3: bridged
+    sanjer: Adapter 4: bridged
+==> sanjer: Forwarding ports...
+    sanjer: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer: Running 'pre-boot' VM customizations...
+==> sanjer: Booting VM...
+==> sanjer: Waiting for machine to boot. This may take a few minutes...
+    sanjer: SSH address: 127.0.0.1:2005
+    sanjer: SSH username: vagrant
+    sanjer: SSH auth method: private key
+    sanjer: 
+    sanjer: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer: this with a newly generated keypair for better security.
+    sanjer: 
+    sanjer: Inserting generated public key within guest...
+    sanjer: Removing insecure key from the guest if it's present...
+    sanjer: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer: Machine booted and ready!
+==> sanjer: Checking for guest additions in VM...
+    sanjer: The guest additions on this VM do not match the installed version of
+    sanjer: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer: prevent things such as shared folders from working properly. If you see
+    sanjer: shared folder errors, please make sure the guest additions within the
+    sanjer: virtual machine match the version of VirtualBox you have installed on
+    sanjer: your host and reload your VM.
+    sanjer: 
+    sanjer: Guest Additions Version: 4.3.36
+    sanjer: VirtualBox Version: 5.0
+==> sanjer: Setting hostname...
+==> sanjer: Configuring and enabling network interfaces...
+==> sanjer: Mounting shared folders...
+    sanjer: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer: /root/.ssh => /root/.ssh
+    sanjer: /opt/mamram => /opt/mamram
+==> sanjer: Running provisioner: shell...
+    sanjer: Running: /tmp/vagrant-shell20161113-4753-cvbyu7.sh
+Sun Nov 13 17:00:36 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer: Forcing shutdown of VM...
+==> sanjer: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer' up with 'virtualbox' provider...
+==> sanjer: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer: Matching MAC address for NAT networking...
+==> sanjer: Setting the name of the VM: vagrant_sanjer_1479049253003_64626
+==> sanjer: Clearing any previously set forwarded ports...
+==> sanjer: Clearing any previously set network interfaces...
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer: which network to bridge to.
+==> sanjer: Preparing network interfaces based on configuration...
+    sanjer: Adapter 1: nat
+    sanjer: Adapter 2: bridged
+    sanjer: Adapter 3: bridged
+    sanjer: Adapter 4: bridged
+==> sanjer: Forwarding ports...
+    sanjer: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer: Running 'pre-boot' VM customizations...
+==> sanjer: Booting VM...
+==> sanjer: Waiting for machine to boot. This may take a few minutes...
+    sanjer: SSH address: 127.0.0.1:2005
+    sanjer: SSH username: vagrant
+    sanjer: SSH auth method: private key
+    sanjer: 
+    sanjer: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer: this with a newly generated keypair for better security.
+    sanjer: 
+    sanjer: Inserting generated public key within guest...
+    sanjer: Removing insecure key from the guest if it's present...
+    sanjer: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer: Machine booted and ready!
+==> sanjer: Checking for guest additions in VM...
+    sanjer: The guest additions on this VM do not match the installed version of
+    sanjer: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer: prevent things such as shared folders from working properly. If you see
+    sanjer: shared folder errors, please make sure the guest additions within the
+    sanjer: virtual machine match the version of VirtualBox you have installed on
+    sanjer: your host and reload your VM.
+    sanjer: 
+    sanjer: Guest Additions Version: 4.3.36
+    sanjer: VirtualBox Version: 5.0
+==> sanjer: Setting hostname...
+==> sanjer: Configuring and enabling network interfaces...
+==> sanjer: Mounting shared folders...
+    sanjer: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer: /root/.ssh => /root/.ssh
+    sanjer: /opt/mamram => /opt/mamram
+==> sanjer: Running provisioner: shell...
+    sanjer: Running: /tmp/vagrant-shell20161113-6325-1x3gz7z.sh
+Mon Nov 14 11:43:12 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: VM not created. Moving on...
+==> sanjer01: VM not created. Moving on...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Killing old vagrant host 6875 /usr/lib/virtualbox/VBoxHeadless--commentvagrant_sanjer_1479049253003_64626--startvmd81f99c3-a949-435c-b8eb-5d3c38054b6b--vrdeconfig
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+==> sanjer01: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%Mon Nov 14 11:56:03 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: VM not created. Moving on...
+==> sanjer01: VM not created. Moving on...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+==> sanjer01: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer01: Matching MAC address for NAT networking...
+==> sanjer01: Setting the name of the VM: vagrant_sanjer01_1479117378275_59796
+==> sanjer01: Clearing any previously set forwarded ports...
+==> sanjer01: Clearing any previously set network interfaces...
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Preparing network interfaces based on configuration...
+    sanjer01: Adapter 1: nat
+    sanjer01: Adapter 2: bridged
+    sanjer01: Adapter 3: bridged
+    sanjer01: Adapter 4: bridged
+==> sanjer01: Forwarding ports...
+    sanjer01: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer01: Running 'pre-boot' VM customizations...
+==> sanjer01: Booting VM...
+==> sanjer01: Waiting for machine to boot. This may take a few minutes...
+    sanjer01: SSH address: 127.0.0.1:2005
+    sanjer01: SSH username: vagrant
+    sanjer01: SSH auth method: private key
+    sanjer01: 
+    sanjer01: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer01: this with a newly generated keypair for better security.
+    sanjer01: 
+    sanjer01: Inserting generated public key within guest...
+    sanjer01: Removing insecure key from the guest if it's present...
+    sanjer01: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer01: Machine booted and ready!
+==> sanjer01: Checking for guest additions in VM...
+    sanjer01: The guest additions on this VM do not match the installed version of
+    sanjer01: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer01: prevent things such as shared folders from working properly. If you see
+    sanjer01: shared folder errors, please make sure the guest additions within the
+    sanjer01: virtual machine match the version of VirtualBox you have installed on
+    sanjer01: your host and reload your VM.
+    sanjer01: 
+    sanjer01: Guest Additions Version: 4.3.36
+    sanjer01: VirtualBox Version: 5.0
+==> sanjer01: Setting hostname...
+==> sanjer01: Configuring and enabling network interfaces...
+==> sanjer01: Mounting shared folders...
+    sanjer01: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer01: /root/.ssh => /root/.ssh
+    sanjer01: /opt/mamram => /opt/mamram
+==> sanjer01: Running provisioner: shell...
+    sanjer01: Running: /tmp/vagrant-shell20161114-10431-vh5o7.sh
+==> sanjer02: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer02: Matching MAC address for NAT networking...
+==> sanjer02: Setting the name of the VM: vagrant_sanjer02_1479117414020_33380
+==> sanjer02: Clearing any previously set forwarded ports...
+==> sanjer02: Clearing any previously set network interfaces...
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Preparing network interfaces based on configuration...
+    sanjer02: Adapter 1: nat
+    sanjer02: Adapter 2: bridged
+    sanjer02: Adapter 3: bridged
+    sanjer02: Adapter 4: bridged
+==> sanjer02: Forwarding ports...
+    sanjer02: 22 (guest) => 2006 (host) (adapter 1)
+==> sanjer02: Running 'pre-boot' VM customizations...
+==> sanjer02: Booting VM...
+==> sanjer02: Waiting for machine to boot. This may take a few minutes...
+    sanjer02: SSH address: 127.0.0.1:2006
+    sanjer02: SSH username: vagrant
+    sanjer02: SSH auth method: private key
+    sanjer02: 
+    sanjer02: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer02: this with a newly generated keypair for better security.
+    sanjer02: 
+    sanjer02: Inserting generated public key within guest...
+    sanjer02: Removing insecure key from the guest if it's present...
+    sanjer02: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer02: Machine booted and ready!
+==> sanjer02: Checking for guest additions in VM...
+    sanjer02: The guest additions on this VM do not match the installed version of
+    sanjer02: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer02: prevent things such as shared folders from working properly. If you see
+    sanjer02: shared folder errors, please make sure the guest additions within the
+    sanjer02: virtual machine match the version of VirtualBox you have installed on
+    sanjer02: your host and reload your VM.
+    sanjer02: 
+    sanjer02: Guest Additions Version: 4.3.36
+    sanjer02: VirtualBox Version: 5.0
+==> sanjer02: Setting hostname...
+==> sanjer02: Configuring and enabling network interfaces...
+==> sanjer02: Mounting shared folders...
+    sanjer02: /vagrant => /opt/mamram/deploy/vagrant
+==> sanjer02: Running provisioner: shell...
+    sanjer02: Running: /tmp/vagrant-shell20161114-10431-fm3mao.sh
+Mon Nov 14 10:12:48 UTC 2016
+Deploying public key
+Mon Nov 14 10:13:35 UTC 2016
+Deploying public key
+Mon Nov 14 11:51:51 UTC 2016
+Deploying public key
+Mon Nov 14 11:53:07 UTC 2016
+Deploying public key
+Mon Nov 14 14:23:11 IST 2016
+Deploying public key
+Mon Nov 14 15:44:36 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: Forcing shutdown of VM...
+==> sanjer02: Destroying VM and associated drives...
+There are errors in the configuration of this machine. Please fix
+the following errors and try again:
+
+vm:
+* The host path of the shared folder is missing: /opt/tikal
+
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Killing old vagrant host 10983 /usr/lib/virtualbox/VBoxHeadless--commentvagrant_sanjer01_1479117378275_59796--startvm6ca9dcdf-df44-4942-b213-2cae3a12bbce--vrdeconfig
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+Mon Nov 14 15:45:13 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: VM not created. Moving on...
+==> sanjer01: VM not created. Moving on...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+==> sanjer01: Importing base box 'ubuntu/trusty64'...
+[KProgress: 80%[KProgress: 90%[K==> sanjer01: Matching MAC address for NAT networking...
+==> sanjer01: Setting the name of the VM: vagrant_sanjer01_1479131128850_32573
+==> sanjer01: Clearing any previously set forwarded ports...
+==> sanjer01: Clearing any previously set network interfaces...
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Preparing network interfaces based on configuration...
+    sanjer01: Adapter 1: nat
+    sanjer01: Adapter 2: bridged
+    sanjer01: Adapter 3: bridged
+    sanjer01: Adapter 4: bridged
+==> sanjer01: Forwarding ports...
+    sanjer01: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer01: Running 'pre-boot' VM customizations...
+==> sanjer01: Booting VM...
+==> sanjer01: Waiting for machine to boot. This may take a few minutes...
+    sanjer01: SSH address: 127.0.0.1:2005
+    sanjer01: SSH username: vagrant
+    sanjer01: SSH auth method: private key
+    sanjer01: 
+    sanjer01: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer01: this with a newly generated keypair for better security.
+    sanjer01: 
+    sanjer01: Inserting generated public key within guest...
+    sanjer01: Removing insecure key from the guest if it's present...
+    sanjer01: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer01: Machine booted and ready!
+==> sanjer01: Checking for guest additions in VM...
+    sanjer01: The guest additions on this VM do not match the installed version of
+    sanjer01: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer01: prevent things such as shared folders from working properly. If you see
+    sanjer01: shared folder errors, please make sure the guest additions within the
+    sanjer01: virtual machine match the version of VirtualBox you have installed on
+    sanjer01: your host and reload your VM.
+    sanjer01: 
+    sanjer01: Guest Additions Version: 4.3.36
+    sanjer01: VirtualBox Version: 5.0
+==> sanjer01: Setting hostname...
+==> sanjer01: Configuring and enabling network interfaces...
+==> sanjer01: Mounting shared folders...
+    sanjer01: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer01: /root/.ssh => /root/.ssh
+    sanjer01: /opt/mamram => /opt/mamram
+==> sanjer01: Running provisioner: shell...
+    sanjer01: Running: /tmp/vagrant-shell20161114-14747-10i2e56.sh
+==> sanjer02: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer02: Matching MAC address for NAT networking...
+==> sanjer02: Setting the name of the VM: vagrant_sanjer02_1479131164676_47003
+==> sanjer02: Clearing any previously set forwarded ports...
+==> sanjer02: Clearing any previously set network interfaces...
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Preparing network interfaces based on configuration...
+    sanjer02: Adapter 1: nat
+    sanjer02: Adapter 2: bridged
+    sanjer02: Adapter 3: bridged
+    sanjer02: Adapter 4: bridged
+==> sanjer02: Forwarding ports...
+    sanjer02: 22 (guest) => 2006 (host) (adapter 1)
+==> sanjer02: Running 'pre-boot' VM customizations...
+==> sanjer02: Booting VM...
+==> sanjer02: Waiting for machine to boot. This may take a few minutes...
+    sanjer02: SSH address: 127.0.0.1:2006
+    sanjer02: SSH username: vagrant
+    sanjer02: SSH auth method: private key
+    sanjer02: 
+    sanjer02: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer02: this with a newly generated keypair for better security.
+    sanjer02: 
+    sanjer02: Inserting generated public key within guest...
+    sanjer02: Removing insecure key from the guest if it's present...
+    sanjer02: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer02: Machine booted and ready!
+==> sanjer02: Checking for guest additions in VM...
+    sanjer02: The guest additions on this VM do not match the installed version of
+    sanjer02: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer02: prevent things such as shared folders from working properly. If you see
+    sanjer02: shared folder errors, please make sure the guest additions within the
+    sanjer02: virtual machine match the version of VirtualBox you have installed on
+    sanjer02: your host and reload your VM.
+    sanjer02: 
+    sanjer02: Guest Additions Version: 4.3.36
+    sanjer02: VirtualBox Version: 5.0
+==> sanjer02: Setting hostname...
+==> sanjer02: Configuring and enabling network interfaces...
+==> sanjer02: Mounting shared folders...
+    sanjer02: /vagrant => /opt/mamram/deploy/vagrant
+==> sanjer02: Running provisioner: shell...
+    sanjer02: Running: /tmp/vagrant-shell20161114-14747-r0pui.sh
+Mon Nov 14 16:01:55 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: VM not created. Moving on...
+==> sanjer01: VM not created. Moving on...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+==> sanjer01: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer01: Matching MAC address for NAT networking...
+==> sanjer01: Setting the name of the VM: vagrant_sanjer01_1479132130360_85557
+==> sanjer01: Clearing any previously set forwarded ports...
+==> sanjer01: Clearing any previously set network interfaces...
+Mon Nov 14 16:04:02 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: VM not created. Moving on...
+==> sanjer01: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+==> sanjer01: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer01: Matching MAC address for NAT networking...
+==> sanjer01: Setting the name of the VM: vagrant_sanjer01_1479132258986_81492
+==> sanjer01: Clearing any previously set forwarded ports...
+==> sanjer01: Clearing any previously set network interfaces...
+==> sanjer01: Preparing network interfaces based on configuration...
+    sanjer01: Adapter 1: nat
+    sanjer01: Adapter 2: bridged
+    sanjer01: Adapter 3: bridged
+    sanjer01: Adapter 4: bridged
+==> sanjer01: Forwarding ports...
+    sanjer01: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer01: Running 'pre-boot' VM customizations...
+==> sanjer01: Booting VM...
+==> sanjer01: Waiting for machine to boot. This may take a few minutes...
+    sanjer01: SSH address: 127.0.0.1:2005
+    sanjer01: SSH username: vagrant
+    sanjer01: SSH auth method: private key
+    sanjer01: 
+    sanjer01: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer01: this with a newly generated keypair for better security.
+    sanjer01: 
+    sanjer01: Inserting generated public key within guest...
+    sanjer01: Removing insecure key from the guest if it's present...
+    sanjer01: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer01: Machine booted and ready!
+==> sanjer01: Checking for guest additions in VM...
+    sanjer01: The guest additions on this VM do not match the installed version of
+    sanjer01: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer01: prevent things such as shared folders from working properly. If you see
+    sanjer01: shared folder errors, please make sure the guest additions within the
+    sanjer01: virtual machine match the version of VirtualBox you have installed on
+    sanjer01: your host and reload your VM.
+    sanjer01: 
+    sanjer01: Guest Additions Version: 4.3.36
+    sanjer01: VirtualBox Version: 5.0
+==> sanjer01: Setting hostname...
+==> sanjer01: Configuring and enabling network interfaces...
+==> sanjer01: Mounting shared folders...
+    sanjer01: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer01: /root/.ssh => /root/.ssh
+    sanjer01: /opt/mamram => /opt/mamram
+==> sanjer01: Running provisioner: shell...
+    sanjer01: Running: /tmp/vagrant-shell20161114-18812-t72spk.sh
+==> sanjer02: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer02: Matching MAC address for NAT networking...
+==> sanjer02: Setting the name of the VM: vagrant_sanjer02_1479132294656_5548
+==> sanjer02: Clearing any previously set forwarded ports...
+==> sanjer02: Clearing any previously set network interfaces...
+==> sanjer02: Preparing network interfaces based on configuration...
+    sanjer02: Adapter 1: nat
+    sanjer02: Adapter 2: bridged
+    sanjer02: Adapter 3: bridged
+    sanjer02: Adapter 4: bridged
+==> sanjer02: Forwarding ports...
+    sanjer02: 22 (guest) => 2006 (host) (adapter 1)
+==> sanjer02: Running 'pre-boot' VM customizations...
+==> sanjer02: Booting VM...
+==> sanjer02: Waiting for machine to boot. This may take a few minutes...
+    sanjer02: SSH address: 127.0.0.1:2006
+    sanjer02: SSH username: vagrant
+    sanjer02: SSH auth method: private key
+    sanjer02: 
+    sanjer02: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer02: this with a newly generated keypair for better security.
+    sanjer02: 
+    sanjer02: Inserting generated public key within guest...
+    sanjer02: Removing insecure key from the guest if it's present...
+    sanjer02: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer02: Machine booted and ready!
+==> sanjer02: Checking for guest additions in VM...
+    sanjer02: The guest additions on this VM do not match the installed version of
+    sanjer02: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer02: prevent things such as shared folders from working properly. If you see
+    sanjer02: shared folder errors, please make sure the guest additions within the
+    sanjer02: virtual machine match the version of VirtualBox you have installed on
+    sanjer02: your host and reload your VM.
+    sanjer02: 
+    sanjer02: Guest Additions Version: 4.3.36
+    sanjer02: VirtualBox Version: 5.0
+==> sanjer02: Setting hostname...
+==> sanjer02: Configuring and enabling network interfaces...
+==> sanjer02: Mounting shared folders...
+    sanjer02: /vagrant => /opt/mamram/deploy/vagrant
+==> sanjer02: Running provisioner: shell...
+    sanjer02: Running: /tmp/vagrant-shell20161114-18812-i6lv8x.sh
+Mon Nov 14 16:16:10 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: Forcing shutdown of VM...
+==> sanjer02: Destroying VM and associated drives...
+==> sanjer01: Forcing shutdown of VM...
+==> sanjer01: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+==> sanjer01: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer01: Matching MAC address for NAT networking...
+==> sanjer01: Setting the name of the VM: vagrant_sanjer01_1479132988836_10884
+==> sanjer01: Clearing any previously set forwarded ports...
+==> sanjer01: Clearing any previously set network interfaces...
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer01: which network to bridge to.
+==> sanjer01: Preparing network interfaces based on configuration...
+    sanjer01: Adapter 1: nat
+    sanjer01: Adapter 2: bridged
+    sanjer01: Adapter 3: bridged
+    sanjer01: Adapter 4: bridged
+==> sanjer01: Forwarding ports...
+    sanjer01: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer01: Running 'pre-boot' VM customizations...
+==> sanjer01: Booting VM...
+==> sanjer01: Waiting for machine to boot. This may take a few minutes...
+    sanjer01: SSH address: 127.0.0.1:2005
+    sanjer01: SSH username: vagrant
+    sanjer01: SSH auth method: private key
+    sanjer01: 
+    sanjer01: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer01: this with a newly generated keypair for better security.
+    sanjer01: 
+    sanjer01: Inserting generated public key within guest...
+    sanjer01: Removing insecure key from the guest if it's present...
+    sanjer01: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer01: Machine booted and ready!
+==> sanjer01: Checking for guest additions in VM...
+    sanjer01: The guest additions on this VM do not match the installed version of
+    sanjer01: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer01: prevent things such as shared folders from working properly. If you see
+    sanjer01: shared folder errors, please make sure the guest additions within the
+    sanjer01: virtual machine match the version of VirtualBox you have installed on
+    sanjer01: your host and reload your VM.
+    sanjer01: 
+    sanjer01: Guest Additions Version: 4.3.36
+    sanjer01: VirtualBox Version: 5.0
+==> sanjer01: Setting hostname...
+==> sanjer01: Configuring and enabling network interfaces...
+==> sanjer01: Mounting shared folders...
+    sanjer01: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer01: /root/.ssh => /root/.ssh
+    sanjer01: /opt/mamram => /opt/mamram
+==> sanjer01: Running provisioner: shell...
+    sanjer01: Running: /tmp/vagrant-shell20161114-22057-16l6bl.sh
+==> sanjer02: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer02: Matching MAC address for NAT networking...
+==> sanjer02: Setting the name of the VM: vagrant_sanjer02_1479133024514_15591
+==> sanjer02: Clearing any previously set forwarded ports...
+==> sanjer02: Clearing any previously set network interfaces...
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Specific bridge 'eth0' not found. You may be asked to specify
+==> sanjer02: which network to bridge to.
+==> sanjer02: Preparing network interfaces based on configuration...
+    sanjer02: Adapter 1: nat
+    sanjer02: Adapter 2: bridged
+    sanjer02: Adapter 3: bridged
+    sanjer02: Adapter 4: bridged
+==> sanjer02: Forwarding ports...
+    sanjer02: 22 (guest) => 2006 (host) (adapter 1)
+==> sanjer02: Running 'pre-boot' VM customizations...
+==> sanjer02: Booting VM...
+==> sanjer02: Waiting for machine to boot. This may take a few minutes...
+    sanjer02: SSH address: 127.0.0.1:2006
+    sanjer02: SSH username: vagrant
+    sanjer02: SSH auth method: private key
+    sanjer02: 
+    sanjer02: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer02: this with a newly generated keypair for better security.
+    sanjer02: 
+    sanjer02: Inserting generated public key within guest...
+    sanjer02: Removing insecure key from the guest if it's present...
+    sanjer02: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer02: Machine booted and ready!
+==> sanjer02: Checking for guest additions in VM...
+    sanjer02: The guest additions on this VM do not match the installed version of
+    sanjer02: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer02: prevent things such as shared folders from working properly. If you see
+    sanjer02: shared folder errors, please make sure the guest additions within the
+    sanjer02: virtual machine match the version of VirtualBox you have installed on
+    sanjer02: your host and reload your VM.
+    sanjer02: 
+    sanjer02: Guest Additions Version: 4.3.36
+    sanjer02: VirtualBox Version: 5.0
+==> sanjer02: Setting hostname...
+==> sanjer02: Configuring and enabling network interfaces...
+==> sanjer02: Mounting shared folders...
+    sanjer02: /vagrant => /opt/mamram/deploy/vagrant
+==> sanjer02: Running provisioner: shell...
+    sanjer02: Running: /tmp/vagrant-shell20161114-22057-el0wpq.sh
+Mon Nov 14 16:20:21 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: Forcing shutdown of VM...
+==> sanjer02: Destroying VM and associated drives...
+==> sanjer01: Forcing shutdown of VM...
+==> sanjer01: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+==> sanjer01: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer01: Matching MAC address for NAT networking...
+==> sanjer01: Setting the name of the VM: vagrant_sanjer01_1479133240354_71945
+==> sanjer01: Clearing any previously set forwarded ports...
+==> sanjer01: Clearing any previously set network interfaces...
+==> sanjer01: Preparing network interfaces based on configuration...
+    sanjer01: Adapter 1: nat
+    sanjer01: Adapter 2: bridged
+    sanjer01: Adapter 3: bridged
+    sanjer01: Adapter 4: bridged
+==> sanjer01: Forwarding ports...
+    sanjer01: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer01: Running 'pre-boot' VM customizations...
+==> sanjer01: Booting VM...
+==> sanjer01: Waiting for machine to boot. This may take a few minutes...
+    sanjer01: SSH address: 127.0.0.1:2005
+    sanjer01: SSH username: vagrant
+    sanjer01: SSH auth method: private key
+    sanjer01: 
+    sanjer01: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer01: this with a newly generated keypair for better security.
+    sanjer01: 
+    sanjer01: Inserting generated public key within guest...
+    sanjer01: Removing insecure key from the guest if it's present...
+    sanjer01: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer01: Machine booted and ready!
+==> sanjer01: Checking for guest additions in VM...
+    sanjer01: The guest additions on this VM do not match the installed version of
+    sanjer01: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer01: prevent things such as shared folders from working properly. If you see
+    sanjer01: shared folder errors, please make sure the guest additions within the
+    sanjer01: virtual machine match the version of VirtualBox you have installed on
+    sanjer01: your host and reload your VM.
+    sanjer01: 
+    sanjer01: Guest Additions Version: 4.3.36
+    sanjer01: VirtualBox Version: 5.0
+==> sanjer01: Setting hostname...
+==> sanjer01: Configuring and enabling network interfaces...
+==> sanjer01: Mounting shared folders...
+    sanjer01: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer01: /root/.ssh => /root/.ssh
+    sanjer01: /opt/mamram => /opt/mamram
+==> sanjer01: Running provisioner: shell...
+    sanjer01: Running: /tmp/vagrant-shell20161114-24961-w0c73c.sh
+==> sanjer02: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer02: Matching MAC address for NAT networking...
+==> sanjer02: Setting the name of the VM: vagrant_sanjer02_1479133276080_68258
+==> sanjer02: Clearing any previously set forwarded ports...
+==> sanjer02: Clearing any previously set network interfaces...
+==> sanjer02: Preparing network interfaces based on configuration...
+    sanjer02: Adapter 1: nat
+    sanjer02: Adapter 2: bridged
+    sanjer02: Adapter 3: bridged
+    sanjer02: Adapter 4: bridged
+==> sanjer02: Forwarding ports...
+    sanjer02: 22 (guest) => 2006 (host) (adapter 1)
+==> sanjer02: Running 'pre-boot' VM customizations...
+==> sanjer02: Booting VM...
+==> sanjer02: Waiting for machine to boot. This may take a few minutes...
+    sanjer02: SSH address: 127.0.0.1:2006
+    sanjer02: SSH username: vagrant
+    sanjer02: SSH auth method: private key
+    sanjer02: 
+    sanjer02: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer02: this with a newly generated keypair for better security.
+    sanjer02: 
+    sanjer02: Inserting generated public key within guest...
+    sanjer02: Removing insecure key from the guest if it's present...
+    sanjer02: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer02: Machine booted and ready!
+==> sanjer02: Checking for guest additions in VM...
+    sanjer02: The guest additions on this VM do not match the installed version of
+    sanjer02: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer02: prevent things such as shared folders from working properly. If you see
+    sanjer02: shared folder errors, please make sure the guest additions within the
+    sanjer02: virtual machine match the version of VirtualBox you have installed on
+    sanjer02: your host and reload your VM.
+    sanjer02: 
+    sanjer02: Guest Additions Version: 4.3.36
+    sanjer02: VirtualBox Version: 5.0
+==> sanjer02: Setting hostname...
+==> sanjer02: Configuring and enabling network interfaces...
+==> sanjer02: Mounting shared folders...
+    sanjer02: /vagrant => /opt/mamram/deploy/vagrant
+==> sanjer02: Running provisioner: shell...
+    sanjer02: Running: /tmp/vagrant-shell20161114-24961-7pb1r8.sh
+Mon Nov 14 16:24:52 IST 2016
+Verifying package 'vagrant' installation
+Verifying package 'vagrant' installation
+Verifying package 'git' installation
+Verifying package 'git' installation
+Verifying package 'virtualbox' installation
+Verifying package 'virtualbox' installation
+Verifying package 'xorg' installation
+Verifying package 'xorg' installation
+Verifying package 'xauth' installation
+Verifying package 'xauth' installation
+Destroying previous Vagrant hosts
+==> sanjer02: Forcing shutdown of VM...
+==> sanjer02: Destroying VM and associated drives...
+==> sanjer01: Forcing shutdown of VM...
+==> sanjer01: Destroying VM and associated drives...
+Removing vagrant host leftovers
+Instantiating Vagrant hosts
+Bringing machine 'sanjer01' up with 'virtualbox' provider...
+Bringing machine 'sanjer02' up with 'virtualbox' provider...
+==> sanjer01: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer01: Matching MAC address for NAT networking...
+==> sanjer01: Setting the name of the VM: vagrant_sanjer01_1479133510892_293
+==> sanjer01: Clearing any previously set forwarded ports...
+==> sanjer01: Clearing any previously set network interfaces...
+==> sanjer01: Preparing network interfaces based on configuration...
+    sanjer01: Adapter 1: nat
+    sanjer01: Adapter 2: bridged
+    sanjer01: Adapter 3: bridged
+    sanjer01: Adapter 4: bridged
+==> sanjer01: Forwarding ports...
+    sanjer01: 22 (guest) => 2005 (host) (adapter 1)
+==> sanjer01: Running 'pre-boot' VM customizations...
+==> sanjer01: Booting VM...
+==> sanjer01: Waiting for machine to boot. This may take a few minutes...
+    sanjer01: SSH address: 127.0.0.1:2005
+    sanjer01: SSH username: vagrant
+    sanjer01: SSH auth method: private key
+    sanjer01: 
+    sanjer01: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer01: this with a newly generated keypair for better security.
+    sanjer01: 
+    sanjer01: Inserting generated public key within guest...
+    sanjer01: Removing insecure key from the guest if it's present...
+    sanjer01: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer01: Machine booted and ready!
+==> sanjer01: Checking for guest additions in VM...
+    sanjer01: The guest additions on this VM do not match the installed version of
+    sanjer01: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer01: prevent things such as shared folders from working properly. If you see
+    sanjer01: shared folder errors, please make sure the guest additions within the
+    sanjer01: virtual machine match the version of VirtualBox you have installed on
+    sanjer01: your host and reload your VM.
+    sanjer01: 
+    sanjer01: Guest Additions Version: 4.3.36
+    sanjer01: VirtualBox Version: 5.0
+==> sanjer01: Setting hostname...
+==> sanjer01: Configuring and enabling network interfaces...
+==> sanjer01: Mounting shared folders...
+    sanjer01: /vagrant => /opt/mamram/deploy/vagrant
+    sanjer01: /root/.ssh => /root/.ssh
+    sanjer01: /opt/mamram => /opt/mamram
+==> sanjer01: Running provisioner: shell...
+    sanjer01: Running: /tmp/vagrant-shell20161114-27867-jnfkpc.sh
+==> sanjer02: Importing base box 'ubuntu/trusty64'...
+[KProgress: 90%[K==> sanjer02: Matching MAC address for NAT networking...
+==> sanjer02: Setting the name of the VM: vagrant_sanjer02_1479133546602_12617
+==> sanjer02: Clearing any previously set forwarded ports...
+==> sanjer02: Clearing any previously set network interfaces...
+==> sanjer02: Preparing network interfaces based on configuration...
+    sanjer02: Adapter 1: nat
+    sanjer02: Adapter 2: bridged
+    sanjer02: Adapter 3: bridged
+    sanjer02: Adapter 4: bridged
+==> sanjer02: Forwarding ports...
+    sanjer02: 22 (guest) => 2006 (host) (adapter 1)
+==> sanjer02: Running 'pre-boot' VM customizations...
+==> sanjer02: Booting VM...
+==> sanjer02: Waiting for machine to boot. This may take a few minutes...
+    sanjer02: SSH address: 127.0.0.1:2006
+    sanjer02: SSH username: vagrant
+    sanjer02: SSH auth method: private key
+    sanjer02: 
+    sanjer02: Vagrant insecure key detected. Vagrant will automatically replace
+    sanjer02: this with a newly generated keypair for better security.
+    sanjer02: 
+    sanjer02: Inserting generated public key within guest...
+    sanjer02: Removing insecure key from the guest if it's present...
+    sanjer02: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> sanjer02: Machine booted and ready!
+==> sanjer02: Checking for guest additions in VM...
+    sanjer02: The guest additions on this VM do not match the installed version of
+    sanjer02: VirtualBox! In most cases this is fine, but in rare cases it can
+    sanjer02: prevent things such as shared folders from working properly. If you see
+    sanjer02: shared folder errors, please make sure the guest additions within the
+    sanjer02: virtual machine match the version of VirtualBox you have installed on
+    sanjer02: your host and reload your VM.
+    sanjer02: 
+    sanjer02: Guest Additions Version: 4.3.36
+    sanjer02: VirtualBox Version: 5.0
+==> sanjer02: Setting hostname...
+==> sanjer02: Configuring and enabling network interfaces...
+==> sanjer02: Mounting shared folders...
+    sanjer02: /vagrant => /opt/mamram/deploy/vagrant
+==> sanjer02: Running provisioner: shell...
+    sanjer02: Running: /tmp/vagrant-shell20161114-27867-joe80m.sh

@@ -1,0 +1,10 @@
+---
+
+- hosts: deploy-servers
+  remote_user: root
+  roles:
+  - apache2
+  - dnsmasq
+  - tftp
+
+

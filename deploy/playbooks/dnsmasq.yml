@@ -1,0 +1,10 @@
+---
+
+- hosts: deploy-servers
+  become: true
+  roles:
+    - role: dnsmasq
+
+
+
+

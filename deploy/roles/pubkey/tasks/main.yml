@@ -1,0 +1,28 @@
+---
+
+- name: "Distribute pubkey authorization to nodes"
+  remote_user: "{{ remote_user }}"
+  authorized_key:
+    user: "{{ item }}"
+    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+  with_items:
+    - "{{ remote_user }}"
+
+- name: "Setup passwdless sudo"
+  become: yes
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/sudoers.d/{{ item }}"
+    owner: root
+    group: root
+  with_items:
+  - sudoers
+
+- name: "Distribute pubkey authorization to nodes"
+  remote_user: "{{ remote_user }}"
+  become: yes
+  authorized_key:
+    user: "{{ item }}"
+    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+  with_items:
+    - root
